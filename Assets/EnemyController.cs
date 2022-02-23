@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Bullet")
         {
-            Destroy(gameObject, 0.1f);
+            Debug.Log("Hit");
+
+            animator.SetTrigger("damage");
+
+            //Destroy(gameObject, 0.1f);
         }      
     }
 }
