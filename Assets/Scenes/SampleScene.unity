@@ -199,6 +199,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2450c87de7b09640b3f042fba4dcd6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectPrefab: {fileID: 5819635228894355785, guid: 67d533dbfe98348408a5f1834440d600,
+    type: 3}
+  effectRotation: {x: 0, y: 0, z: 0}
+  enemy: {fileID: 457801323}
 --- !u!136 &457801315
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -213,6 +217,12 @@ CapsuleCollider:
   m_Height: 1.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!4 &457801323 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 1167915294}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0

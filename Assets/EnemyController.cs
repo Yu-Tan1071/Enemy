@@ -5,6 +5,9 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     Animator animator;
+    public GameObject effectPrefab;
+    public Vector3 effectRotation;
+    public Transform enemy;
 
     void Start()
     {
@@ -18,7 +21,14 @@ public class EnemyController : MonoBehaviour
 
             animator.SetTrigger("damage");
 
-            //Destroy(gameObject, 0.1f);
-        }      
+        }
+        if (effectPrefab != null)
+        {
+            Instantiate(
+                effectPrefab,
+                enemy.transform.position,
+                Quaternion.identity);//Quaternion.identity 回転なし
+        }
+        Destroy(gameObject, 0.1f);
     }
 }

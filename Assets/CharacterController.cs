@@ -21,6 +21,7 @@ public class CharacterController : MonoBehaviour
         pos.z += frontBack;
         transform.position = pos;
         
+        /*
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             //Quaternion rot = new Quaternion(0f, 90f, 0f, 0f);
@@ -33,6 +34,7 @@ public class CharacterController : MonoBehaviour
             rot.y -= 45;
             transform.rotation = Quaternion.Euler(0f, rot.y, 0f);
         }
+        */
         
     }
 }
